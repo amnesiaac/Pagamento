@@ -1,0 +1,35 @@
+﻿@model SetorPagamento.Models.Pagamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pagamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pedido.PedidoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pedido.PedidoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PagamentoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
